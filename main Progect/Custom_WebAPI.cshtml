@@ -1,0 +1,119 @@
+﻿<div>
+    <button class="btn btn-success text-white" onclick="OpenCreateForm()">Create</button>
+    <button class="btn btn-dark text-white" onclick="ReadAPI()">Read</button>    
+</div>
+<div class="form-div d-none mt-4">
+    <form action="/" method="post" class="grid">
+
+        <input type="hidden" id="studentId" />
+
+        <div class="g-col-12">
+            <h2>Student Information</h2>
+            <p>Enter the details of the student below:</p>
+        </div>
+        <div class="g-col-6 d-flex flex-column cus__studentinfo-input">
+            <label for="StudentName">Student Name</label>
+            <input type="text" name="StudentName" id="StudentName" value="" />
+        </div>
+        <div class="g-col-6 d-flex flex-column cus__studentinfo-select">
+            <label for="StudentClass">Student Sec</label>
+            <select id="StudentClass">
+                <option value="">Select Sec</option>
+                <option value="Sec A">Sec A</option>
+                <option value="Sec B">Sec B</option>
+                <option value="Sec C">Sec C</option>
+                <option value="Sec D">Sec D</option>
+                <option value="Sec E">Sec E</option>
+            </select>
+        </div>
+        <div class="g-col-6 d-flex flex-column cus__studentinfo-input">
+            <label for="StudentAge">Student Age</label>
+            <input type="text" name="StudentAge" id="StudentAge" value="" pattern="[0-9]+" />
+        </div>
+        <div class="g-col-6 d-flex flex-column cus__studentinfo-input">
+            <label for="StudentEmail">Student Email</label>
+            <input type="email" name="StudentEmail" id="StudentEmail" value="" />
+        </div>
+        <div class="g-col-6 d-flex flex-column cus__studentinfo-input">
+            <label for="StudentPhone">Student Phone</label>
+            <input type="text" name="StudentPhone" id="StudentPhone" value="" />
+        </div>
+        <div class="g-col-12 d-flex flex-column cus__studentinfo-input">
+            <label for="StudentAddress">Student Address</label>
+            <textarea name="StudentAddress" id="StudentAddress" class="py-2"> </textarea>
+        </div>
+        <div class="g-col-12 text-center mt-2">
+            <button type="button" class="btn btn-success text-white d-none" id="AddBtn" onclick="CreateAPI()">Add Data</button>
+            <button type="button" class="btn btn-success text-white d-none" id="UpdateBtn" onclick="UpdateAPI()">Update Data</button>
+        </div>
+    </form>
+</div>
+
+<table id="studentsTable" border="1" class="d-none table mt-3">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data will be inserted here -->        
+    </tbody>
+</table>
+
+<script>
+    function CreateAPI() {       
+
+        var studentName = $('#StudentName').val();
+        var studentClass = $('#StudentClass').val();
+        var studentAge = $('#StudentAge').val();
+        var studentEmail = $('#StudentEmail').val();
+        var studentPhone = $('#StudentPhone').val();
+        var studentAddress = $('#StudentAddress').val();
+
+        // Validate fields
+        if (!studentName || !studentClass || !studentAge || !studentEmail || !studentPhone || !studentAddress) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Build JSON payload
+        var data = JSON.stringify({
+            StudentName: studentName,
+            StudentClass: studentClass,
+            StudentAge: parseInt(studentAge),
+            StudentEmail: studentEmail,
+            StudentPhone: studentPhone,
+            StudentAddress: studentAddress
+        });
+
+        // Send request
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/custom/studentpreset/insert", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    let response = JSON.parse(xhr.responseText);
+                    console.log("Created:", response);
+
+                    // Optional: user feedback
+                    alert(response.HttpStatusMessage || "Student created successfully!");
+                    ReadAPI(); // refresh table
+                } else {
+                    console.error("Failed to create:", xhr.status);
+                    alert("Failed to insert student.");
+                }
+            }
+        };
+
+        xhr.send(data);
+    }    
+</script>
