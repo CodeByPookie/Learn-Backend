@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>CustomWebApi</id>
+    <version>1.0.2</version>
+    <title>CustomWebApi</title>
+    <authors>Selva</authors>
+    <description>Update Student Table via CustomWebApi</description>
+    <copyright>Copyright @ 2025 By ska</copyright>
+    <tags>Custom web API</tags>
+    <repository type="git" commit="92b73e95cd954206d22ff3facdfeacaf46b25866" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="Dynamicweb.Ecommerce" version="10.17.1" exclude="Build,Analyzers" />
+        <dependency id="Dynamicweb.Host.Core" version="10.17.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="13.0.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Projects\Bluedrop\custom\CustomWebApi\bin\Debug\net8.0\CustomWebApi.dll" target="lib\net8.0\CustomWebApi.dll" />
+  </files>
+</package>

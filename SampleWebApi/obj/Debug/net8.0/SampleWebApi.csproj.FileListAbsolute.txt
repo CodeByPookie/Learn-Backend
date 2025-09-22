@@ -1,0 +1,13 @@
+D:\Projects\Bluedrop\custom\SampleWebApi\bin\Debug\net8.0\SampleWebApi.deps.json
+D:\Projects\Bluedrop\custom\SampleWebApi\bin\Debug\net8.0\SampleWebApi.dll
+D:\Projects\Bluedrop\custom\SampleWebApi\bin\Debug\net8.0\SampleWebApi.pdb
+D:\Projects\Bluedrop\custom\SampleWebApi\obj\Debug\net8.0\SampleWebApi.csproj.AssemblyReference.cache
+D:\Projects\Bluedrop\custom\SampleWebApi\obj\Debug\net8.0\SampleWebApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Bluedrop\custom\SampleWebApi\obj\Debug\net8.0\SampleWebApi.AssemblyInfoInputs.cache
+D:\Projects\Bluedrop\custom\SampleWebApi\obj\Debug\net8.0\SampleWebApi.AssemblyInfo.cs
+D:\Projects\Bluedrop\custom\SampleWebApi\obj\Debug\net8.0\SampleWebApi.csproj.CoreCompileInputs.cache
+D:\Projects\Bluedrop\custom\SampleWebApi\obj\Debug\net8.0\SampleWebApi.sourcelink.json
+D:\Projects\Bluedrop\custom\SampleWebApi\obj\Debug\net8.0\SampleWebApi.dll
+D:\Projects\Bluedrop\custom\SampleWebApi\obj\Debug\net8.0\refint\SampleWebApi.dll
+D:\Projects\Bluedrop\custom\SampleWebApi\obj\Debug\net8.0\SampleWebApi.pdb
+D:\Projects\Bluedrop\custom\SampleWebApi\obj\Debug\net8.0\ref\SampleWebApi.dll

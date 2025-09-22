@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>CustomWebApi</Title>
+    <Authors>Selva</Authors>
+    <Company>DW</Company>
+    <Description>Update Student Table via CustomWebApi</Description>
+    <Copyright>Copyright @ 2025 By ska</Copyright>
+    <PackageTags>Custom web API </PackageTags>
+    <Version>1.0.2</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dynamicweb.Ecommerce" Version="10.17.1" />
+    <PackageReference Include="Dynamicweb.Host.Core" Version="10.17.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+</Project>

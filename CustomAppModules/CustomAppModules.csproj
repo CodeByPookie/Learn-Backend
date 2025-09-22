@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<PackageId>CustomAppModules</PackageId>
+	<Title>CustomAppModules</Title>
+	<Version>10.3.6</Version>
+	<Authors>Selva</Authors>
+	<Company>DW</Company>
+	<Product>CustomApp</Product>
+	<Description>Add Custom Module for Web API</Description>
+	<Copyright>Copyright @2025 by ska</Copyright>
+	<PackageTags>Custom App</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\CustomAppModules.10.1.1.nupkg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dynamicweb.CoreUI" Version="10.12.1" />
+    <PackageReference Include="Dynamicweb.CoreUI.Rendering" Version="10.12.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Debug\net8.0\" />
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+</Project>
